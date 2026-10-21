@@ -73,7 +73,7 @@ const TECH_ROW_2: TechItem[] = [
   {
     id: 'tailwind',
     name: 'Tailwind CSS',
-    logoUrl: '/logos/css3.png',
+    logoUrl: '/logos/tailwind.svg',
   },
 ];
 
@@ -107,8 +107,8 @@ export const TechStackSection: React.FC = () => {
                     src={tech.logoUrl}
                     alt={`${tech.name} logo`}
                     className="max-w-full max-h-full object-contain filter drop-shadow brightness-110"
-                    loading="lazy"
-                    decoding="async"
+                    loading="eager"
+                    decoding="sync"
                   />
                 </div>
                 <span className="text-sm sm:text-lg md:text-2xl font-extrabold text-white tracking-wide font-sans">
@@ -132,8 +132,8 @@ export const TechStackSection: React.FC = () => {
                     src={tech.logoUrl}
                     alt={`${tech.name} logo`}
                     className="max-w-full max-h-full object-contain filter drop-shadow brightness-110"
-                    loading="lazy"
-                    decoding="async"
+                    loading="eager"
+                    decoding="sync"
                   />
                 </div>
                 <span className="text-sm sm:text-lg md:text-2xl font-extrabold text-white tracking-wide font-sans">

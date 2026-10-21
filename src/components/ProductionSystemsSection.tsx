@@ -162,13 +162,51 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                         {study.videoUrl ? (
                           <div className="relative w-full h-full bg-black">
                             <video
+                              ref={(videoEl) => {
+                                if (!videoEl) return;
+                                videoEl.defaultMuted = true;
+                                videoEl.muted = true;
+                                videoEl.setAttribute('muted', '');
+                                videoEl.setAttribute('playsinline', '');
+                                videoEl.setAttribute('webkit-playsinline', '');
+
+                                const triggerPlay = () => {
+                                  if (videoEl.paused) {
+                                    videoEl.play().catch(() => {});
+                                  }
+                                };
+
+                                triggerPlay();
+                                videoEl.onloadeddata = triggerPlay;
+                                videoEl.oncanplay = triggerPlay;
+                                videoEl.onpause = () => {
+                                  if (!document.hidden) triggerPlay();
+                                };
+                                videoEl.onended = () => {
+                                  videoEl.currentTime = 0;
+                                  triggerPlay();
+                                };
+
+                                if ('IntersectionObserver' in window) {
+                                  const observer = new IntersectionObserver(
+                                    (entries) => {
+                                      entries.forEach((entry) => {
+                                        if (entry.isIntersecting) triggerPlay();
+                                      });
+                                    },
+                                    { threshold: 0.1 }
+                                  );
+                                  observer.observe(videoEl);
+                                }
+                              }}
                               src={study.videoUrl}
                               poster={study.imageUrl}
-                              preload="metadata"
+                              preload="auto"
                               autoPlay
                               loop
                               muted
                               playsInline
+                              disablePictureInPicture
                               className="w-full h-full object-cover object-top"
                             />
                           </div>
@@ -177,7 +215,7 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                             src={study.imageUrl}
                             alt={study.imageAlt}
                             className="w-full h-full object-contain sm:object-cover sm:object-top transition-transform duration-700 ease-out group-hover/img:scale-[1.03] bg-[#0c0c0c]"
-                            loading="lazy"
+                            loading="eager"
                             decoding="async"
                             onError={(e) => {
                               const target = e.currentTarget;

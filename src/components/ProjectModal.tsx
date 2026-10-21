@@ -102,11 +102,24 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           {hasVideo ? (
             <div className="w-full bg-black rounded-xl overflow-hidden shadow-2xl flex items-center justify-center border border-neutral-800">
               <video
+                ref={(videoEl) => {
+                  if (!videoEl) return;
+                  videoEl.defaultMuted = true;
+                  videoEl.muted = true;
+                  videoEl.setAttribute('muted', '');
+                  videoEl.setAttribute('playsinline', '');
+                  videoEl.setAttribute('webkit-playsinline', '');
+                  if (videoEl.paused) {
+                    videoEl.play().catch(() => {});
+                  }
+                }}
                 src={videoUrl}
                 autoPlay
                 controls
                 loop
+                muted
                 playsInline
+                preload="auto"
                 className="w-full h-auto max-h-[70vh] object-contain rounded-xl mx-auto"
               />
             </div>
@@ -122,7 +135,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <img
                   src={imageUrl}
                   alt={imageAlt}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   className="w-full h-auto object-contain block"
                 />
@@ -156,7 +169,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <img
                   src={currentDisplayImage}
                   alt={imageAlt}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   className="w-full h-auto max-h-[68vh] object-contain rounded-lg"
                 />

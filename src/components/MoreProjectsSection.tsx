@@ -87,13 +87,51 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                     {project.videoUrl ? (
                       <div className="relative w-full h-full group/vid">
                         <video
+                          ref={(videoEl) => {
+                            if (!videoEl) return;
+                            videoEl.defaultMuted = true;
+                            videoEl.muted = true;
+                            videoEl.setAttribute('muted', '');
+                            videoEl.setAttribute('playsinline', '');
+                            videoEl.setAttribute('webkit-playsinline', '');
+
+                            const triggerPlay = () => {
+                              if (videoEl.paused) {
+                                videoEl.play().catch(() => {});
+                              }
+                            };
+
+                            triggerPlay();
+                            videoEl.onloadeddata = triggerPlay;
+                            videoEl.oncanplay = triggerPlay;
+                            videoEl.onpause = () => {
+                              if (!document.hidden) triggerPlay();
+                            };
+                            videoEl.onended = () => {
+                              videoEl.currentTime = 0;
+                              triggerPlay();
+                            };
+
+                            if ('IntersectionObserver' in window) {
+                              const observer = new IntersectionObserver(
+                                (entries) => {
+                                  entries.forEach((entry) => {
+                                    if (entry.isIntersecting) triggerPlay();
+                                  });
+                                },
+                                { threshold: 0.1 }
+                              );
+                              observer.observe(videoEl);
+                            }
+                          }}
                           src={project.videoUrl}
                           poster="/assets/coverimage.webp"
-                          preload="metadata"
+                          preload="auto"
                           autoPlay
                           loop
                           muted
                           playsInline
+                          disablePictureInPicture
                           className="w-full h-full object-cover object-top"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover/vid:bg-black/5 transition-colors flex items-center justify-center">
@@ -109,7 +147,7 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                         <img
                           src={project.imageUrl}
                           alt={project.imageAlt || project.title}
-                          loading="lazy"
+                          loading="eager"
                           decoding="async"
                           className={`w-full ${
                             project.mockupType === 'wordpress'
