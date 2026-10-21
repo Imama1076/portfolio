@@ -51,10 +51,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         <a
           href="#hero"
           onClick={(e) => handleLinkClick(e, 'hero')}
-          className="flex items-center tracking-wider text-base sm:text-lg md:text-xl font-bold uppercase transition-transform duration-200 hover:scale-[1.02]"
+          className="flex items-center text-xl sm:text-2xl md:text-[26px] font-normal uppercase tracking-tight transition-transform duration-200 hover:scale-[1.02] select-none"
+          style={{ fontFamily: '"Bebas Neue", "Antonio", "Oswald", sans-serif' }}
         >
-          <span className="text-white font-extrabold tracking-widest">AMAMA</span>
-          <span className="text-neutral-400 font-light ml-2 tracking-widest">FAYYAZ</span>
+          <span className="text-white">AMAMA</span>
+          <span className="text-neutral-400 ml-1.5">FAYYAZ</span>
         </a>
 
         {/* Center / Right Desktop Navigation Links: HOME, PROJECTS, ABOUT, CONTACT */}
