@@ -89,7 +89,7 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                         <video
                           src={project.videoUrl}
                           poster="/assets/coverimage.webp"
-                          preload="none"
+                          preload="metadata"
                           autoPlay
                           loop
                           muted

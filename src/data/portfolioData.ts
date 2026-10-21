@@ -118,7 +118,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     role: 'Lead Backend & Full-Stack Developer',
     coreStack: 'Laravel | MySQL | Bootstrap 5',
     backendExecution: 'Laravel MVC Architecture',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOVYPBd7ZvFUykT9DYqSZjDCN7yvX3pkAvtZhFCAJbAYAhYSGDJSSRYowNejgi-ImiYXA7vazZhn1yazkyN9h2pZSoyMgFG2VGNJuOufSMMSmAIerV9wieQOsnFTnrci918isepTjLMkaEGt5j998VrWVzRTb9AlQlhqc9F3icUpgVL4OwIrMtmuB2kZo16syv8ER211Adjr6eMG9VcY8jQnVv52wYTxtX2DyQfCxPEkWnetQFvhw',
+    imageUrl: '/assets/foodnexus_thumb.jpg',
     imageAlt: 'FoodNexus Food Delivery Web Application',
     videoUrl: '/assets/foodnexus_video.mp4',
     leadParagraph: 'Developed as my final-year project, FoodNexus is a food delivery web application featuring food search, filtering, user authentication, and admin management using Laravel MVC architecture.',

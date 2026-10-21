@@ -163,8 +163,8 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                           <div className="relative w-full h-full bg-black">
                             <video
                               src={study.videoUrl}
-                              poster="/assets/video_thumb.webp"
-                              preload="none"
+                              poster={study.imageUrl}
+                              preload="metadata"
                               autoPlay
                               loop
                               muted
