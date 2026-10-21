@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build outputs
+dist/
+build/
+coverage/
+
+# Environment and sensitive keys
+.env*
+!.env.example
+*.local
+
+# System and IDE files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.gemini/
+.aistudio/
+powershell.cmd
+
+# Root source media (canonical versions are saved in public/assets/)
+FoodNexus*.mp4
+WhatsApp Video*.mp4
+COVERIMAGE.PNG
+GRADORA.png
+WORDPRESS.png
+preview*.JPG
+*-removebg-preview.png
+ai-studio.png
+bun.lock

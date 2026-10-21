@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Playfair Display", serif;
+  --font-serif: "Newsreader", "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-condensed: "Bebas Neue", "Antonio", "Oswald", sans-serif;
+
+  --color-surface: #fbf9f5;
+  --color-surface-container: #f4f1ea;
+  --color-surface-container-low: #f8f6f1;
+  --color-surface-container-high: #eae6dc;
+  --color-surface-variant: #e5e2da;
+  --color-outline-variant: #dbd7cd;
+  --color-outline: #7a776f;
+  --color-on-surface: #191817;
+  --color-on-surface-variant: #5a5750;
+  --color-secondary: #404040;
+  --color-accent: #191817;
+  --color-accent-rose: #191817;
+}
+
+@layer utilities {
+  .font-editorial-italic {
+    font-family: "Newsreader", "Playfair Display", serif;
+    font-style: italic;
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-reverse 32s linear infinite;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .animate-marquee-slow:hover,
+  .animate-marquee-slow-reverse:hover {
+    animation-play-state: paused;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbf9f5;
+  color: #191817;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Lenis Smooth Scroll Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+::selection {
+  background-color: #191817;
+  color: #ffffff;
+}
