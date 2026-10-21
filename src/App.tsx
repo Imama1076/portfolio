@@ -44,11 +44,16 @@ export default function App() {
       {/* Top Header Navigation */}
       <Navbar onNavigate={scrollToSection} />
 
-      {/* Hero Section with scaling animation & floating dots */}
-      <Hero onExploreClick={() => scrollToSection('intro')} />
+      {/* Fixed Hero Curtain Container */}
+      <div id="hero" className="relative w-full h-screen">
+        {/* Fixed Hero: Stays pinned in background while next content rolls up over it */}
+        <div className="fixed top-0 left-0 w-full h-screen z-0">
+          <Hero onExploreClick={() => scrollToSection('intro')} />
+        </div>
+      </div>
 
-      {/* Main Content Sections */}
-      <main className="w-full bg-[#fbf9f5] flex-grow">
+      {/* Main Content Sections: Slides UP OVER the fixed Hero like a physical curtain */}
+      <main className="relative z-10 w-full bg-[#fbf9f5] flex-grow shadow-[0_-25px_60px_rgba(0,0,0,0.5)]">
         {/* Section 01: About Me (WordPress Developer Focus) */}
         <NarrativeSection />
 
@@ -69,7 +74,9 @@ export default function App() {
       </main>
 
       {/* Editorial Footer with Direct Contact */}
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
 
       {/* Floating Smooth Scroll-to-Top Button */}
       <ScrollToTop />
