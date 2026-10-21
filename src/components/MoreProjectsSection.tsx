@@ -88,6 +88,8 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                       <div className="relative w-full h-full group/vid">
                         <video
                           src={project.videoUrl}
+                          poster="/assets/coverimage.webp"
+                          preload="none"
                           autoPlay
                           loop
                           muted
@@ -107,6 +109,8 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                         <img
                           src={project.imageUrl}
                           alt={project.imageAlt || project.title}
+                          loading="lazy"
+                          decoding="async"
                           className={`w-full ${
                             project.mockupType === 'wordpress'
                               ? 'object-cover object-top transition-transform duration-[4500ms] ease-in-out group-hover/thumb:-translate-y-[62%]'

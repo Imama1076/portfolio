@@ -163,6 +163,8 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                           <div className="relative w-full h-full bg-black">
                             <video
                               src={study.videoUrl}
+                              poster="/assets/video_thumb.webp"
+                              preload="none"
                               autoPlay
                               loop
                               muted
@@ -176,6 +178,7 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                             alt={study.imageAlt}
                             className="w-full h-full object-contain sm:object-cover sm:object-top transition-transform duration-700 ease-out group-hover/img:scale-[1.03] bg-[#0c0c0c]"
                             loading="lazy"
+                            decoding="async"
                             onError={(e) => {
                               const target = e.currentTarget;
                               target.style.display = 'none';

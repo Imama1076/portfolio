@@ -10,32 +10,32 @@ const TECH_ROW_1: TechItem[] = [
   {
     id: 'wordpress',
     name: 'WordPress',
-    logoUrl: '/logos/wordpress.png',
+    logoUrl: '/logos/wordpress.webp',
   },
   {
     id: 'antigravity',
     name: 'Google Antigravity',
-    logoUrl: '/logos/antigravity.png',
+    logoUrl: '/logos/antigravity.webp',
   },
   {
     id: 'woocommerce',
     name: 'WooCommerce',
-    logoUrl: '/logos/woocommerce.png',
+    logoUrl: '/logos/woocommerce.webp',
   },
   {
     id: 'laravel',
     name: 'Laravel',
-    logoUrl: '/logos/laravel.png',
+    logoUrl: '/logos/laravel.webp',
   },
   {
     id: 'mysql',
     name: 'MySQL',
-    logoUrl: '/logos/mysql.png',
+    logoUrl: '/logos/mysql.webp',
   },
   {
     id: 'elementor',
     name: 'Elementor',
-    logoUrl: '/logos/elementor.png',
+    logoUrl: '/logos/elementor.webp',
   },
 ];
 
@@ -43,22 +43,22 @@ const TECH_ROW_2: TechItem[] = [
   {
     id: 'aistudio',
     name: 'Google AI Studio',
-    logoUrl: '/logos/ai-studio.png',
+    logoUrl: '/logos/ai-studio.webp',
   },
   {
     id: 'javascript',
     name: 'JavaScript',
-    logoUrl: '/logos/javascript.png',
+    logoUrl: '/logos/javascript.webp',
   },
   {
     id: 'html5',
     name: 'HTML5',
-    logoUrl: '/logos/html5.png',
+    logoUrl: '/logos/html5.webp',
   },
   {
     id: 'css3',
     name: 'CSS3',
-    logoUrl: '/logos/css3.png',
+    logoUrl: '/logos/css3.webp',
   },
   {
     id: 'bootstrap',
@@ -68,7 +68,7 @@ const TECH_ROW_2: TechItem[] = [
   {
     id: 'github',
     name: 'GitHub',
-    logoUrl: '/logos/github.png',
+    logoUrl: '/logos/github.webp',
   },
   {
     id: 'tailwind',
@@ -108,6 +108,7 @@ export const TechStackSection: React.FC = () => {
                     alt={`${tech.name} logo`}
                     className="max-w-full max-h-full object-contain filter drop-shadow brightness-110"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="text-sm sm:text-lg md:text-2xl font-extrabold text-white tracking-wide font-sans">
@@ -132,6 +133,7 @@ export const TechStackSection: React.FC = () => {
                     alt={`${tech.name} logo`}
                     className="max-w-full max-h-full object-contain filter drop-shadow brightness-110"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="text-sm sm:text-lg md:text-2xl font-extrabold text-white tracking-wide font-sans">

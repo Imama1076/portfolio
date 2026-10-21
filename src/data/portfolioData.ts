@@ -10,7 +10,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     role: 'Founder & Web Developer',
     coreStack: 'WordPress | Elementor',
     backendExecution: 'eCommerce & Business Management',
-    imageUrl: '/assets/spendaura.png',
+    imageUrl: '/assets/spendaura.webp',
     imageAlt: 'Spendaura WordPress & Elementor eCommerce Website',
     leadParagraph: 'Founded and developed Spendaura, an e-commerce business, building its website and gaining practical experience in web development and business management. Later sold to a local vendor.',
     subheading: '',
@@ -62,7 +62,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     role: 'Lead Developer',
     coreStack: 'AI-Assisted Development | Academic Planning',
     backendExecution: 'GPA/CGPA Tracking & Study Scheduling',
-    imageUrl: '/assets/gradora.png',
+    imageUrl: '/assets/gradora.webp',
     imageAlt: 'Gradora Student Academic Planning & Productivity App',
     leadParagraph: 'Currently developing a student academic planner app to simplify GPA/CGPA tracking, semester management, and study scheduling through a user-friendly experience.',
     subheading: '',
@@ -305,7 +305,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     stack: ['Google Antigravity', 'Google AI Studio'],
     highlightColor: '#191817',
     mockupType: 'breaksy',
-    imageUrl: '/assets/coverimage.png',
+    imageUrl: '/assets/coverimage.webp',
     imageAlt: 'Breaksy Productivity & Habit Interruption App',
     videoUrl: '/assets/project_video.mp4',
     modalData: {
@@ -347,7 +347,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     stack: ['WordPress', 'Elementor', 'WooCommerce'],
     highlightColor: '#dbd7cd',
     mockupType: 'wordpress',
-    imageUrl: '/assets/wordpress.png',
+    imageUrl: '/assets/wordpress.webp',
     imageAlt: 'eCommerce Sneaker Store WordPress Platform',
     modalData: {
       title: 'eCommerce Sneaker Store — Custom WordPress Platform',
@@ -388,12 +388,12 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     stack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'OpenWeatherMap API'],
     highlightColor: '#38bdf8',
     mockupType: 'weather',
-    imageUrl: '/assets/weather_preview1.jpg',
+    imageUrl: '/assets/weather_preview1.webp',
     imageAlt: 'Dynamic Weather Web App using OpenWeather API',
     galleryImages: [
-      '/assets/weather_preview1.jpg',
-      '/assets/weather_preview2.jpg',
-      '/assets/weather_preview3.jpg'
+      '/assets/weather_preview1.webp',
+      '/assets/weather_preview2.webp',
+      '/assets/weather_preview3.webp'
     ],
     modalData: {
       title: 'Weather App — Real-Time Meteorological Application',
