@@ -190,15 +190,20 @@ export const MoreProjectsSection: React.FC<MoreProjectsSectionProps> = ({ onSele
                 </div>
 
                 {/* Stack Badges */}
-                <div className="flex flex-wrap gap-1 sm:gap-1.5 pt-1 sm:pt-2">
-                  {project.stack.map((tech, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#eae6dc] text-[10px] sm:text-[11px] font-mono text-[#191817] rounded-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="space-y-1.5 pt-1 sm:pt-2">
+                  <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-[#7a776f] block">
+                    {project.stackHeading || 'Core Technologies:'}
+                  </span>
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5">
+                    {project.stack.map((tech, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#eae6dc] text-[10px] sm:text-[11px] font-mono text-[#191817] rounded-sm font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.article>

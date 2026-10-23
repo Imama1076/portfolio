@@ -6,13 +6,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     number: '01',
     category: 'WordPress | Elementor',
     title: 'SPENDAURA',
-    timeline: 'Founded, Operated & Exited',
+    timeline: 'Founded, Operated & Sold',
     role: 'Founder & Web Developer',
     coreStack: 'WordPress | Elementor',
     backendExecution: 'eCommerce & Business Management',
     imageUrl: '/assets/spendaura.webp',
     imageAlt: 'Spendaura WordPress & Elementor eCommerce Website',
-    leadParagraph: 'Founded and developed Spendaura, an e-commerce business, building its website and gaining practical experience in web development and business management. Later sold to a local vendor.',
+    leadParagraph: 'Founded and ran Spendaura, a WordPress and WooCommerce store, building the site with Elementor and managing it day to day. After about a year I sold it to a local vendor. It gave me hands-on experience in web development and running a real online business.',
     subheading: '',
     subParagraph: '',
     ctaText: 'View Details',
@@ -25,7 +25,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     modalData: {
       title: 'Spendaura — E-Commerce Business & Platform',
       subtitle: 'WordPress | Elementor • Full Lifecycle Development & Vendor Exit',
-      description: 'Founded and developed Spendaura as an end-to-end e-commerce venture, building the platform from scratch and later executing a successful asset transfer to a local retail vendor.',
+      description: 'Founded and ran Spendaura, a WordPress and WooCommerce store, building the site with Elementor and managing it day to day. After about a year I sold it to a local vendor. It gave me hands-on experience in web development and running a real online business.',
       features: [
         {
           title: 'WordPress & Elementor Development',
@@ -64,7 +64,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     backendExecution: 'GPA/CGPA Tracking & Study Scheduling',
     imageUrl: '/assets/gradora.webp',
     imageAlt: 'Gradora Student Academic Planning & Productivity App',
-    leadParagraph: 'Currently developing a student academic planner app to simplify GPA/CGPA tracking, semester management, and study scheduling through a user-friendly experience.',
+    leadParagraph: 'Designing and building a student academic planner app for GPA/CGPA tracking, semester management and study scheduling. I build it with Google Antigravity and Google AI Studio, define the features myself, test every flow and fix what breaks.',
     subheading: '',
     subParagraph: '',
     ctaText: 'View Details',
@@ -73,11 +73,12 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Modules', value: 'Semester & Study Scheduler' },
       { label: 'Workflow', value: 'AI-Assisted Velocity', highlight: true },
     ],
+    stackHeading: 'BUILT WITH',
     stackBadges: ['Google Antigravity', 'Google AI Studio'],
     modalData: {
       title: 'Gradora — Student Academic Planner App',
       subtitle: 'AI-Assisted Development | Academic Planning • Simplifying Student Workflows',
-      description: 'An intuitive academic management application designed to eliminate grade confusion, streamline course milestones, and provide structured study scheduling for university students.',
+      description: 'Designing and building a student academic planner app for GPA/CGPA tracking, semester management and study scheduling. I build it with Google Antigravity and Google AI Studio, define the features myself, test every flow and fix what breaks.',
       features: [
         {
           title: 'GPA & CGPA Precision Tracker',
@@ -297,11 +298,12 @@ export const MetricBadge: React.FC<{ label: string; value: string }> = ({ label,
 export const SECONDARY_PROJECTS: SecondaryProject[] = [
   {
     id: 'breaksy',
-    title: 'Breaksy',
-    category: 'Productivity & Screen Time Application',
+    title: 'BREAKSY',
+    category: 'Focus & Habit App',
     year: '2025',
-    tagline: 'Breaks mindless muscle-memory before doomscrolling begins.',
-    description: 'An innovative habit and productivity platform designed to interrupt automatic phone checking, offering smooth friction-based cognitive pacing and deep work sprint intervals.',
+    tagline: 'Landing page for a focus and habit app',
+    description: 'A landing page for Breaksy, a habit app that interrupts mindless phone checking, showcasing features like breathing, puzzles and focus mode.',
+    stackHeading: 'BUILT WITH',
     stack: ['Google Antigravity', 'Google AI Studio'],
     highlightColor: '#191817',
     mockupType: 'breaksy',
@@ -309,9 +311,9 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     imageAlt: 'Breaksy Productivity & Habit Interruption App',
     videoUrl: '/assets/project_video.mp4',
     modalData: {
-      title: 'Breaksy — Friction Over Hard Blocking',
+      title: 'BREAKSY — Focus & Habit App Landing Page',
       subtitle: 'Productivity Application • Interactive Live Walkthrough',
-      description: 'Breaks mindless muscle-memory before doomscrolling begins. Traditional blockers simply lock apps after reaching a daily limit, leading users to instantly dismiss them. Breaksy steps in before doomscrolling even starts, interrupting automatic urges and gently shifting focus back toward intentional choices.',
+      description: 'A landing page for Breaksy, a habit app that interrupts mindless phone checking, showcasing features like breathing, puzzles and focus mode.',
       features: [
         {
           title: 'Friction-Based Interruption Engine',
@@ -344,6 +346,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     year: '2024',
     tagline: 'Custom WordPress & Elementor eCommerce platform for engineered athletic footwear.',
     description: 'A bespoke client WordPress website featuring custom post types, curated product catalogs, responsive layouts, high-performance asset loading, and tailored Elementor design.',
+    stackHeading: 'Core Technologies:',
     stack: ['WordPress', 'Elementor', 'WooCommerce'],
     highlightColor: '#dbd7cd',
     mockupType: 'wordpress',
@@ -385,6 +388,7 @@ export const SECONDARY_PROJECTS: SecondaryProject[] = [
     year: '2024',
     tagline: 'Dynamic real-time weather web application using OpenWeatherMap API, HTML, CSS & Vanilla JS.',
     description: 'A dynamic weather application built with semantic HTML5, modern CSS glassmorphism, and Vanilla JavaScript. Interacts with the OpenWeatherMap API to display real-time temperatures, condition states (daylight clouds, night clear sky, sunset), humidity, wind speed, and predictive 5-day forecasts.',
+    stackHeading: 'Core Technologies:',
     stack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'OpenWeatherMap API'],
     highlightColor: '#38bdf8',
     mockupType: 'weather',

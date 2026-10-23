@@ -115,7 +115,7 @@ export const ProductionSystemsSection: React.FC<ProductionSystemsSectionProps> =
                     {/* Stack Badges */}
                     <div className="space-y-1.5 sm:space-y-2 pt-1">
                       <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-[#7a776f] block">
-                        Core Technologies:
+                        {study.stackHeading || 'Core Technologies:'}
                       </span>
                       <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {study.stackBadges.map((tech, tIdx) => (

@@ -19,6 +19,7 @@ export interface CaseStudy {
     value: string;
     highlight?: boolean;
   }[];
+  stackHeading?: string;
   stackBadges: string[];
   modalData: {
     title: string;
@@ -37,6 +38,7 @@ export interface SecondaryProject {
   year: string;
   tagline: string;
   description: string;
+  stackHeading?: string;
   stack: string[];
   highlightColor?: string;
   mockupType: 'breaksy' | 'wordpress' | 'omnisync' | 'weather';
